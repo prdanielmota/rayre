@@ -1,0 +1,39 @@
+/* --------------------------------------------------------------------------------------
++
++ Animations
++
+-------------------------------------------------------------------------------------- */
+
+@mixin move_parameter {
+	0% {
+		left: 10px;	
+	}
+	50% {
+		left: 20px;	
+	}	
+	80% {
+		left: 10px;	
+	}	
+}
+
+@-moz-keyframes move { 
+	@include move_parameter;
+}
+
+@-webkit-keyframes move {
+	@include move_parameter; 
+}
+
+@-o-keyframes move {
+	@include move_parameter;
+}
+
+@keyframes move {
+	@include move_parameter;
+}
+
+
+
+/* animation call into style of element*/
+
+// @include anim(0, 150s, move, linear);

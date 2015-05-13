@@ -1,0 +1,38 @@
+/* --------------------------------------------------------------------------------------
++
++ GRID VARIABLES (tweaked version of http://csswizardry.com/2013/02/introducing-csswizardry-grids/)
++
+-------------------------------------------------------------------------------------- */
+
+
+//SET THE SPACING BETWEEN YOUR GRID ITEMS
+$grid-gutter:                           20px !default;
+$grid-gutter-bottom:                    $grid-gutter !default;
+
+
+$grid-narrowest-gutter:                 round($grid-gutter / 3) !default;
+$grid-narrowest-gutter-bottom:          $grid-narrowest-gutter !default;
+
+
+$grid-narrow-gutter:                    round($grid-gutter / 2) !default;
+$grid-narrow-gutter-bottom:             $grid-narrow-gutter !default;
+
+
+$grid-wide-gutter:                      $grid-gutter * 2 !default;
+$grid-wide-gutter-bottom:               $grid-wide-gutter !default;
+
+
+$grid-widest-gutter:                    $grid-gutter * 3 !default;
+$grid-widest-gutter-bottom:             $grid-widest-gutter !default;
+
+
+//AT WHICH POINT SHOULD BREAKPOINTS KICK IN?
+$grid-medium-start:                     481px !default;
+$grid-large-start:                      769px !default;
+$grid-extra-large-start:                1024px !default;
+
+
+//SETTING UP WIDTHS (DO NOT EDIT THIS)
+$grid-small-end:                        $grid-medium-start - 1px;
+$grid-medium-end:                       $grid-large-start - 1px;
+$grid-large-end:                        $grid-extra-large-start - 1px;

@@ -1,0 +1,66 @@
+/* --------------------------------------------------------------------------------------
++
++ FORMS
++
+-------------------------------------------------------------------------------------- */
+//DEFAULT VARIABLES
+$textarea-height:                       150px;
+
+input[type="text"], textarea {
+	vertical-align: middle;
+	background-color: $input-bgr;
+    font-family: $base-font;
+    font-size: 18px;
+	@include transition(all .4s ease);
+	@include radius(0);
+    -webkit-appearance: none; //remove inner box-shadow from iOS devices
+    box-shadow: none;
+    width: 100%;
+	padding: 15px 20px 13px;
+	border: 1px solid $border;
+	color: $input-clr;
+    // @include lh(30px);
+    font-style: italic;
+    line-height: 1;
+	&:hover, &:focus {
+		border: 1px solid $border-active;
+		background-color: #fff;
+	}
+    &:invalid {
+        @include box-shadow(none);  /* fixes mozilla red outline (shadow) */
+    }
+    &.input--placeholder {
+    	color: $input-placeholder-clr;
+    }
+}
+
+textarea {
+	padding: 15px 20px;
+	line-height: $base-line-height;
+	resize: none;
+    min-height: $textarea-height;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+     color: transparent;
+}
+
+.main-form {
+	.cont1, .cont2 {
+		position: relative;
+	}
+	input.notify,textarea.notify {
+		border-color: #ff0000;
+
+	}
+	p.notify {
+		font-size: 12px;
+		position: absolute;
+		top: 100%;
+		margin-top: 3px;
+		left: 5px;
+		color: #ff0000;
+		margin-bottom: 0;
+		line-height: 12px;
+	}
+}

@@ -1,0 +1,77 @@
+/* --------------------------------------------------------------------------------------
++
++   AUTHOR: 
++
+-------------------------------------------------------------------------------------- */
+
+/*------------------------------------------------------------------
+
+[Master Stylesheet]
+
+Project:	    PHOTO LUX multipurpose website
+Version:	    1.0
+Last change:	09/03/2015
+Made by:        ThemeStreet.Net
+
+
+
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+
+- BODY
+	- BASIC STYLES
+
+	1. Bootstrap styles 
+	2. BASE
+	3. VARIABLES
+	4. LAYOUT
+	5. GRID STYLE
+
+	6. COMMON STYLE
+
+		- ANIMATION
+		- BUTTONS
+		- CALENDAR
+		- FLAG
+		- FOOTER
+		- FORMS
+		- HEADER
+		- HEADINGS
+		- HELPERS
+		- ICONS
+		- JUSTIFIZE
+		- MAGNIFIC POPUP
+		- TABLEIZE
+		- TYPE
+		- VERICALIZE
+
+	7. CUSTOM STYLE
+
+		- CONTENT
+		- SCROLL
+		- sLIDER PORTFOLIO
+
+	8. MIXINS
+	9. MEDIA
+
+
+-------------------------------------------------------------------*/
+
+//BASIC STYLES AND VARIABLES
+@import "bootstrap/index";
+@import "base";
+@import "variables";
+
+//LAYOUT
+@import "layout";
+@import "grid/index";
+@import "common/index";
+@import "custom/index";
+@import "mixins";
+@import "media";

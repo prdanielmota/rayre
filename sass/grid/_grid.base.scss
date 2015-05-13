@@ -1,0 +1,202 @@
+/* --------------------------------------------------------------------------------------
++
++ GRID BASE (tweaked version of http://csswizardry.com/2013/02/introducing-csswizardry-grids/)
++
+-------------------------------------------------------------------------------------- */
+
+//GRID
+.grid {
+    font-size: 0;
+    list-style: none;                       /* Allow the grid system to be used on lists */
+    margin: 0;
+    margin-left: -$grid-gutter;             /* Apply a negative `margin-left` to negate the columns’ gutters */
+    padding: 0;
+
+    //NESTED GRID
+    .grid {
+        &:last-child {
+            margin-bottom: -$grid-gutter-bottom;     /* remove bottom space for nested grid */
+        }
+    }
+
+    //GRID FLUSH BOTTOM
+    &.grid--flush--bottom {
+        margin-bottom: -$grid-gutter-bottom !important;
+    }
+}
+
+
+//GRID ITEM
+.grid__item {
+    @include box-sizing(border-box);        /* Required to combine fluid widths and fixed gutters */
+    display: inline-block;
+    @include font-size($base-font-size);
+    margin-bottom: $grid-gutter-bottom;
+    padding-left: $grid-gutter;
+    vertical-align: top;
+}
+
+
+//NARROWEST GRID
+.grid--narrowest {
+    margin-left: -$grid-narrowest-gutter;           /* Apply a negative 'margin-left' to negate the columns' gutters */
+
+    //NESTED GRID
+    .grid & {
+        &:last-child {
+            margin-bottom: -$grid-narrowest-gutter-bottom;     /* remove bottom space for nested grid */
+        }
+    }
+
+    //GRID ITEM
+    & > .grid__item {
+        margin-bottom: $grid-narrowest-gutter-bottom;
+        padding-left: $grid-narrowest-gutter;
+    }
+    &.grid--flush--bottom {
+        margin-bottom: -$grid-narrowest-gutter-bottom !important;
+    }
+}
+
+
+//NARROW GRID
+.grid--narrow {
+    margin-left: -$grid-narrow-gutter;           /* Apply a negative 'margin-left' to negate the columns' gutters */
+
+    //NESTED GRID
+    .grid & {
+        &:last-child {
+            margin-bottom: -$grid-narrow-gutter-bottom;     /* remove bottom space for nested grid */
+        }
+    }
+
+    //GRID ITEM
+    & > .grid__item {
+        margin-bottom: $grid-narrow-gutter-bottom;
+        padding-left: $grid-narrow-gutter;
+    }
+    &.grid--flush--bottom {
+        margin-bottom: -$grid-narrow-gutter-bottom !important;
+    }
+}
+
+
+
+//WIDE GRID
+.grid--wide {
+    margin-left: -$grid-wide-gutter;           /* Apply a negative 'margin-left' to negate the columns' gutters */
+
+    //NESTED GRID
+    .grid & {
+        &:last-child {
+            margin-bottom: -$grid-wide-gutter-bottom;     /* remove bottom space for nested grid */
+        }
+    }
+
+    //GRID ITEM
+    & > .grid__item {
+        margin-bottom: $grid-wide-gutter-bottom;
+        padding-left: $grid-wide-gutter;
+    }
+    &.grid--flush--bottom {
+        margin-bottom: -$grid-wide-gutter-bottom !important;
+    }
+}
+
+
+//WIDEST GRID
+.grid--widest {
+    margin-left: -$grid-widest-gutter;           /* Apply a negative 'margin-left' to negate the columns' gutters */
+
+    //NESTED GRID
+    .grid & {
+        &:last-child {
+            margin-bottom: -$grid-widest-gutter-bottom;     /* remove bottom space for nested grid */
+        }
+    }
+
+    //GRID ITEM
+    & > .grid__item {
+        margin-bottom: $grid-widest-gutter-bottom;
+        padding-left: $grid-widest-gutter;
+    }
+    &.grid--flush--bottom {
+        margin-bottom: -$grid-widest-gutter-bottom !important;
+    }
+}
+
+
+//NOWRAP GRID
+.grid--nowrap {
+    white-space: nowrap;
+
+    & > .grid__item {
+        white-space: normal;
+    }
+}
+
+
+//REVERSED GRID (ALLOWS YOU TO STRUCTURE YOUR SOURCE DIFFERENT TO HOW YOUR RENDERED LAYOUT WILL APPEAR)
+.grid--reversed {
+    direction: rtl;
+    text-align: left;
+
+    & > .grid__item {
+        direction: ltr;
+        text-align: left;
+    }
+}
+
+
+//GUTTERLESS GRIDS HAVE ALL THE PROPERTIES OF REGULAR GRIDS, MINUS ANY SPACING
+.grid--gutterless {
+    margin-left: 0;
+    margin-bottom: $grid-gutter-bottom;  /* since there's no gutter on .grid__items we have to compensate with margin bottom on .grid--gutterless */
+
+    & > .grid__item {
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    .grid &:last-child {
+        margin-bottom: 0;       /* when nested .grid--gutterless:last-child should have no bottom margin */
+    }
+    &.grid--flush--bottom {
+        margin-bottom: 0 !important;
+    }
+}
+
+
+//CENTERED GRIDS ALIGN GRID ITEMS CENTRALLY WITHOUT NEEDING TO USE PUSH OR PULL CLASSES
+.grid--center {
+    text-align: center;
+
+    & > .grid__item {
+        text-align: left;
+    }
+}
+
+
+//ALIGN THE ENTIRE GRID TO THE RIGHT
+.grid--right {
+    text-align: right;
+
+    & > .grid__item {
+        text-align: left;
+    }
+}
+
+
+//VERTICALLY ALIGN GRID ITEMS TO MIDDLE
+.grid--middle {
+    & > .grid__item {
+        vertical-align: middle;
+    }
+}
+
+
+//VERTICALLY ALIGN GRID ITEMS TO BOTTOM
+.grid--bottom {
+    & > .grid__item {
+        vertical-align: bottom;
+    }
+}

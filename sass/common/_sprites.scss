@@ -1,0 +1,33 @@
+/* --------------------------------------------------------------------------------------
++
++ SPRITES
++
+-------------------------------------------------------------------------------------- */
+
+
+/* SPRITES */
+
+$sprite-library: sprite-map("library/*.png", $spacing: 20, $position: 50%, $layout: smart);  //defining sprite
+$library-list: icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8;
+ //defining classes used
+
+%element-base {
+    background: $sprite-library no-repeat;
+    position: absolute;
+    content: '';
+    display: block;
+    left: 30px;
+    top: 30px;
+} //defining general style for all elements
+
+@each $element in $library-list {
+    .#{$element}:before {
+        @extend %element-base;
+        background-position: sprite-position($sprite-library, #{$element});
+        height: image-height(sprite-file($sprite-library, #{$element}));
+        width: image-width(sprite-file($sprite-library, #{$element}));
+    }
+    .#{$element}:hover:before {
+            background-position: sprite-position($sprite-library, #{$element}_hover);
+    } 
+} 

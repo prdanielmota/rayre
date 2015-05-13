@@ -1,0 +1,45 @@
+/* --------------------------------------------------------------------------------------
++
++ FOOTER
++
+-------------------------------------------------------------------------------------- */
+.footer-main {
+	background-color: $footer-bgr;
+	//important for sticky footer
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	clear: both;
+	.container {
+		padding:20px 15px;
+	}
+	ul {
+
+	}
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		a {
+			color: #000;
+			span {
+				font-size: 17px;
+			}
+			&:hover {
+				color: #fc686a;
+			}
+		}
+	}
+	li + li {
+		margin-left: 15px;
+	}
+	small {
+		color: #898989;
+		font-size: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 300;
+	}
+
+}

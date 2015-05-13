@@ -1,0 +1,68 @@
+/* --------------------------------------------------------------------------------------
++
++ FLAG
++
+-------------------------------------------------------------------------------------- */
+
+/*
+    http://csswizardry.com/2013/05/the-flag-object/
+
+    <div class="flag">
+      <div class="flag__img">
+        <img> or some other element here
+      </div>
+      <div class="flag__body">
+        flag content
+      </div>
+    </div>
+*/
+
+//FLAG
+.flag {
+    display: table;
+    width: 100%;
+}
+
+//FLAG IMAGE AND BODY
+.flag__img,
+.flag__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    //GENERAL VERTICAL ALIGNMENT
+    .flag--top & {
+        vertical-align: top;
+    }
+    .flag--bottom & {
+        vertical-align: bottom;
+    }
+}
+
+//FLAG IMAGE
+.flag__img {
+    padding-left: 20px;
+
+    & > img {
+        display: block;
+    }
+    .flag--reversed & {
+        padding-left: 0;
+        padding-right: 60px;
+    }
+    .flag--gutterless & {
+        padding: 0;
+    }
+}
+
+//FLAG BODY
+.flag__body {
+    width: 100%;
+}
+
+
+//FLAG PROMINENT
+.flag--prominent {
+    .flag__img {
+        padding-left: 80px;
+    }
+}

@@ -1,0 +1,63 @@
+
+//GLOBAL VARIABLES
+
+$experimental-support-for-svg:          true;
+
+//Basic colors
+$base-clr:                            	#fff;
+$header-bgr:                            #fff; 
+$footer-bgr:							#fff;
+$base-font:                             "Crimson Text", serif;
+$title-font:                            "Oswald", sans-serif;
+
+$base-font-size:          				20px;
+$font-size:          					20px;
+$fs:$base-font-size;
+$font-weight: 							400;
+$base-line-height: 						$base-font-size*1.5;
+$lh : $base-line-height;
+ 
+//COLORS
+$text-clr: 								#fff;
+$second-clr:							#fff;
+$title-clr:								#000000;
+$link-clr:								#898989;
+$link-hover:							#000000;
+
+$color-dark:                            #fff;
+$color-cold:                            #fff;
+$color-warm:                            #fff;
+$color-alert:                           #fff;
+$color-success:                         #fff;
+$color-mute:                            #fff;
+$color-white:                           #fff;
+
+
+$border:								#898989;
+$border-active:							#000; 
+$footer-clr:							#fff;
+
+$input-clr:								#898989;
+$input-placeholder-clr:					#000;
+$input-bgr:								#fff;
+
+$btn-clr:								#000;
+$btn-bgr:								#fff;
+$btn-hover:								#fff;
+
+
+//LAYOUT 
+$space:                          		20px;
+$page-width:                            1202px;
+$radius:								3px;
+
+
+//SELECT TEXT
+$selected-text-bgr:						#000;
+$selected-text-clr:						#fff;
+
+
+//GRID
+$gutter:                                20px;
+$grid-gutter:                           $gutter;
+$grid-wide-gutter:                      30px;

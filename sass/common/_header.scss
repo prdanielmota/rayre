@@ -1,0 +1,120 @@
+/* --------------------------------------------------------------------------------------
++
++ HEADER
++
+-------------------------------------------------------------------------------------- */
+header  {
+	background-color: #fff; /* layer fill content */
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,.03); /* drop shadow */
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,.03); /* drop shadow */
+	box-shadow: 0 3px 3px rgba(0,0,0,.03); /* drop shadow */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	.container {
+		position: relative;
+		padding: 39px 15px;
+		@include transition(.5s);
+	}
+
+	.nav-list{ 
+		height: 100%;
+		li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		#open-nav {
+			@include fadeout;
+		}
+		li+li {
+			margin-left: 13px;
+		}
+		a {
+			color: #000;
+			display: flex;
+			vertical-align: middle;
+			&:hover {
+				color: #fc686a;
+			}
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		.icon-list {
+			font-size: 24px;
+		}
+		.icon-mail  {
+			font-size: 20px;
+		}
+		.fa-th-large {
+			font-size:19px;
+			margin-left: 3px;
+		}
+	}
+	nav {
+		position: absolute;
+		top: 49%;
+		left: 50%;
+		height: 100%;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+	    -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
+	    transform: translate(-50%,-50%);
+	    >ul {
+			white-space: nowrap;
+	    	height: 100%;
+			display: table;
+			margin: 0 auto;
+			>li {
+				height: 100%;				
+				display: table-cell;
+			    background-color: #fff;
+				vertical-align: middle;
+				padding: 0 17px;
+				
+				a {
+					font-size: 18px;
+					font-weight: 300;
+				} 
+			}
+
+	    }
+	}
+    .dropdown {
+    	position: relative;
+    	&:hover {
+    		.dropdown-list {
+    			-ms-transform: translate(0,0); /* IE 9 */
+		    	-webkit-transform: translate(0,0); /* Chrome, Safari, Opera */
+		    	transform: translate(0,0);
+    		}
+    	}
+    	.dropdown-list {
+    		position: absolute;
+    		top: 100%;
+    		left: 0;
+    		min-width: 190px;
+    		padding:25px;
+    		background-color: #fff;
+    		z-index: -1;
+    		display: block;
+			-webkit-box-shadow: inset 0px 33px 8px -37px rgba(0,0,0,0.75);
+			-moz-box-shadow: inset 0px 33px 8px -37px rgba(0,0,0,0.75);
+			box-shadow: inset 0px 33px 8px -37px rgba(0,0,0,0.75);
+			@include transition(.4s);
+			-ms-transform: translate(0,-100%); /* IE 9 */
+		    -webkit-transform: translate(0,-100%); /* Chrome, Safari, Opera */
+		    transform: translate(0,-100%);
+    		li +li {
+    			margin-top: 15px;
+    		}
+    	}
+    }
+    &.change {
+		.container {
+			padding: 20px 15px;
+		}
+	}
+}

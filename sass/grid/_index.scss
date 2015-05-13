@@ -1,0 +1,19 @@
+/* --------------------------------------------------------------------------------------
++
++ STARTERIZED GRID INDEX
++
+-------------------------------------------------------------------------------------- */
+
+
+@import 'grid.settings';
+@import 'grid.mixins';
+@import 'grid.base';
+@import 'grid.generator';
+
+
+// example of grid
+// http://dev.thegentlemansjournal.co.uk/whats-on.php
+
+// <div class="grid__item one-whole M--one-half L--one-third"></div>
+
+//setup _grid.generator.scss file

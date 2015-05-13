@@ -1,0 +1,72 @@
+/* --------------------------------------------------------------------------------------
++
++ TABLEIZE
++
+-------------------------------------------------------------------------------------- */
+
+/*
+    The .tableize__content serves as container for cell content. If you need width or padding set on a cell, make sure you set it to .tableize__content since that is what makes the whole thing work.
+
+    <div class="tableize">
+      <div class="tableize__cell">
+        <div class="tableize__content">
+          cell content
+        </div>
+      </div>
+      <div class="tableize__cell">
+        <div class="tableize__content">
+          cell content
+        </div>
+      </div>
+    </div>
+*/
+
+//TABLEIZE CONTAINER
+.tableize {
+    display: table;
+    width: 100%;
+}
+.tableize--full {
+    height: 100%;
+
+    .tableize__cell,
+    .tableize__content {
+        height: inherit;
+    }
+}
+
+.tabeleize--720-width {
+    width: 720px;
+    margin: 0 auto;
+} 
+
+//TABLEIZE CELL
+.tableize__cell {
+    display: table-cell;
+    vertical-align: top;
+
+    //GENERAL VERTICAL ALIGNMENT FOR CELLS
+    .tableize--middle & {
+        vertical-align: middle;
+    }
+    .tableize--bottom & {
+        vertical-align: bottom;
+    }
+}
+
+//FILLER CELL
+.tableize__cell--filler {
+    width: 100%;        /* fills the rest of the row when one or more cells have fixed width */
+}
+
+//STICKY HEADER/FOOTER (as per http://tiny.cc/4fqdzw)
+/*
+    Tableize row and tableize row flexible are needed only for sticky header/footer combination.
+*/
+.tableize__row {
+    display: table-row;
+    height: 1px;
+}
+.tableize__row--flexible {
+    height: auto;
+}

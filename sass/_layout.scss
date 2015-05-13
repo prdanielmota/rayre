@@ -1,0 +1,46 @@
+/* --------------------------------------------------------------------------------------
++
++ LAYOUT
++
+-------------------------------------------------------------------------------------- */
+
+@import "compass/layout.scss";
+
+
+
+main {
+	display: block; /* this is important for some browsers (opera, ...) who recognize <main> as inline element */
+	overflow-x: hidden;
+
+	.error-page-html & {
+		height: 100%;
+	}
+}
+
+.container {
+    margin: 0 auto;
+    width: $page-width;
+}
+
+@media (max-width: $page-width - 1) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+	header,footer {
+		.container {
+			padding: 20px 15px!important;
+
+		}
+	}
+}
+
+.left {
+	float: left;
+
+}
+
+.right {
+	float: right;
+
+}

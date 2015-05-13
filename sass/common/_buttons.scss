@@ -1,0 +1,68 @@
+/* --------------------------------------------------------------------------------------
++
++ BUTTONS
++
+-------------------------------------------------------------------------------------- */
+
+//DEFAULT BUTTON STYLE
+.btn {
+    font-family: $title-font;
+    font-size: 17px;
+    @include unselectable;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    vertical-align: middle !important;
+    white-space: nowrap !important;
+    display: inline-block;
+    text-align: center;
+    @include radius(0);
+    height: 52px;
+    line-height: 50px;
+    @include bs;
+    font-weight: 300;
+    padding: 0 ;
+    margin: 0;/* remove margin for some browsers */
+    color: $btn-clr;
+    background: $btn-bgr;
+    // border: none;
+    border: 1px solid $border;
+    @include transition(all .3s ease);
+    position: relative;
+
+    span {
+        @include fadeout;
+        vertical-align: middle;
+        @include translate(1s);
+        display: inline-block;
+        position: relative;
+        margin-left: -15px;
+    }
+    &:hover {
+        cursor: pointer !important;
+        text-decoration: none !important;
+        background: $btn-hover;
+        span {
+            @include fadein;
+            position: relative!important;
+            margin-left: 0;
+            margin-right: -8px;
+        }
+    }
+    &:active, &:focus {
+        background-color: #fff;
+    }
+    &.btn-medium {
+        width: 175px;
+
+    }
+    &.load-more {
+        border:1px solid #fff;
+        height: 40px;
+        line-height: 38px;
+        width: 108px;
+        font-size: 16px;
+        background-color: #fff;
+    }
+}
+
+

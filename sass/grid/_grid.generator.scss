@@ -1,0 +1,23 @@
+/* --------------------------------------------------------------------------------------
++
++ GRID GENERATOR (tweaked version of http://csswizardry.com/2013/02/introducing-csswizardry-grids/)
++
+-------------------------------------------------------------------------------------- */
+
+
+//REGULAR, NON-RESPONSIVE WIDTH CLASSES
+@include viewport-type();
+
+
+@media (max-width:$grid-small-end) {
+    @include viewport-type("S--");
+}
+
+@media (min-width: $grid-medium-start) and (max-width:$grid-medium-end) {
+    @include viewport-type("M--");
+}
+
+@media (min-width: $grid-large-start) {
+    @include viewport-type("L--");
+}
+
